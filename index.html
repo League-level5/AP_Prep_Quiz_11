@@ -2,11 +2,9 @@
   <h1 align="center">QUIZ</h1>
 </head>
 
-<body onload="startup()" style="background-color:lightblue">
+<body onload="startup()" style="background-color:#bbccdd;font-weight:bold;font-size:22px;">
   <pre style="white-space:pre-wrap;"><code>
-  <div id="docBody" style="font-size:22px;">
-    
-</div>
+  <div id="docBody"style="overflow:visible;"></div>
 </code></pre>
 </body>
 
@@ -179,6 +177,10 @@ questions[4].correctAnswer = 1;
     return total;
   }
   
+  function reloadPage(){
+    location = location;
+  }
+  
   function submit(){
     setUserAnswer();
     
@@ -202,5 +204,6 @@ questions[4].correctAnswer = 1;
         body.innerHTML += "<hr size=\"3\">";
       }
     }
+            body.innerHTML += "<button onclick=\"reloadPage()\">START OVER</button>";
   }
 </script>
